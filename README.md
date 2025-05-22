@@ -120,5 +120,3 @@ Feel free to fork, try on your own AWS instances, and improve this project.
 ## 📜 License
 
 This project is open-source and available under the MIT License.
-
-```
