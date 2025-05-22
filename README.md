@@ -5,7 +5,7 @@ This project demonstrates an automated configuration and deployment of web serve
 ## 📁 Project Structure
 
 - `play.yaml`: Ansible playbook that:
-  - Sets up Apache on `slave1` with a custom webpage and UFW configuration.
+  - Sets up Apache on `slave1` with a custom webpage.
   - Sets up Nginx on `slave2` and deploys a basic HTML page.
 
 ## 🛠 Technologies Used
