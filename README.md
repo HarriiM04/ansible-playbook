@@ -37,3 +37,25 @@ This project demonstrates an automated configuration and deployment of web serve
 
 ```bash
 ansible-playbook play.yaml
+
+
+🛰️ Testing SSH Connection
+Run this command to test if Ansible can communicate with both instances:
+
+bash
+Copy
+Edit
+ansible -m ping all
+Expected Output:
+
+json
+Copy
+Edit
+slave1 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
+slave2 | SUCCESS => {
+    "changed": false,
+    "ping": "pong"
+}
