@@ -1,0 +1,49 @@
+---
+
+- name: play1 setup apache on slave1 
+  hosts: slave1
+  become: yes
+  tasks:
+    - name: update and upgrade system
+      apt:
+        update_cache: yes
+        upgrade: dist
+
+    - name: install apache2
+      apt:
+        name: apache2
+        state: latest
+
+    - name: page for  slave1
+      copy:
+        dest: /var/www/html/index.html
+        content:
+          <html>
+          <head><title>Slave1 Apache</title></head>
+          <body><h1>Welcome to {{ inventory_hostname }} with apache2</h1></body>
+          </html>
+
+- name: play2 for slave2 nginx
+  hosts: slave2
+  become: yes
+  tasks:
+    - name: update and upgrade system
+      apt:
+        update_cache: yes
+        upgrade: dist
+
+    - name: install nginx
+      apt:
+        name: nginx
+        state: latest
+
+
+    - name: custom page on slave 2
+      copy:
+        dest: /var/www/html/index.html
+        content: |
+          <html>
+          <head><title>Slave2 Nginx setup</title></head>
+          <body><h1>  Let i present {{ inventory_hostname }} </h1></body>
+          </html>
+
