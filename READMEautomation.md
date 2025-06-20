@@ -1,22 +1,22 @@
 ---
 
-# 🛡️ Automated Backup Script with Google Drive & Webhook Integration
+# Automated Backup Script with Google Drive & Webhook Integration
 
 This script provides a **simple yet powerful solution** to back up your project directory, upload it to Google Drive, and manage old backups using a rotational strategy. It also notifies you of backup status via webhook.
 
 ---
 
-## ✅ Features
+## Features
 
-* 🔁 **Rotational Backup** (Daily, Weekly, Monthly)
-* ☁️ **Integration with Google Drive** via `rclone`
-* 🧹 **Auto-cleanup of older backups**
-* 🔔 **Webhook notifications** using `curl`
-* ⚙️ **Customizable** configuration (project name, backup folder, remote name, etc.)
+* **Rotational Backup** (Daily, Weekly, Monthly)
+* **Integration with Google Drive** via `rclone`
+* **Auto-cleanup of older backups**
+* **Webhook notifications** using `curl`
+* **Customizable** configuration (project name, backup folder, remote name, etc.)
 
 ---
 
-## ⚙️ Prerequisites
+## Prerequisites
 
 ### 1. Install Required Tools
 
@@ -29,7 +29,7 @@ sudo apt install zip curl rclone
 
 ---
 
-## ☁️ Google Drive Setup (One-time)
+## Google Drive Setup (One-time)
 
 Set up `rclone` to connect with your Google Drive:
 
@@ -49,7 +49,7 @@ Follow these steps:
 
 ---
 
-## 🚀 Clone Any GitHub Repo (for Demo/Test)
+## Clone Any GitHub Repo (for Demo/Test)
 
 You can use any small GitHub repo for testing. Example:
 
@@ -60,7 +60,7 @@ cd ansible-playbook
 
 ---
 
-## 📝 Script Configuration
+## Script Configuration
 
 Before running the script, open it with `nano`:
 
@@ -70,7 +70,7 @@ nano backup_script.sh
 
 And update these key parts:
 
-### 🔹 Set the remote name and folder:
+### Set the remote name and folder:
 
 ```bash
 # Remote drive name and folder
@@ -82,7 +82,7 @@ REMOTE_FOLDER="ansible-playbook"
 
 ---
 
-### 🔹 Set webhook URL:
+### Set webhook URL:
 
 Go to [https://webhook.site](https://webhook.site), copy the generated URL, and update:
 
@@ -93,7 +93,7 @@ WEBHOOK_URL="https://webhook.site/your-generated-url"
 
 ---
 
-### 🔹 Set project name:
+### Set project name:
 
 Make it the same as your GitHub repo:
 
@@ -104,7 +104,7 @@ PROJECT_NAME="ansible-playbook"
 
 ---
 
-### 💾 Save and Exit Nano
+### Save and Exit Nano
 
 After editing in `nano`, save with:
 
@@ -113,7 +113,7 @@ After editing in `nano`, save with:
 
 ---
 
-## ▶️ Run the Backup Script
+## Run the Backup Script
 
 Now run the script like this:
 
@@ -125,7 +125,13 @@ bash backup_script.sh ~/ansible-playbook ~/mybackups
 
 ---
 
-## 📌 Notes
+## Now all Set 
+
+now go and check the google drive there's folder named ansible-playbook is created and inside that folder zip folder of the project is uploaded whenever the user execute the script
+and it is also stores the backup zip file inside local folder backuptask you can check on it also.
+
+---
+
 
 * Make sure the first argument is the **project folder path**
 * Second argument is the **backup folder path**
