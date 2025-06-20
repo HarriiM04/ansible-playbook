@@ -133,14 +133,3 @@ bash backup_script.sh ~/ansible-playbook ~/mybackups
 * Logs are written to: `~/mybackups/backup.log`
 
 ---
-
-## ✅ Success Criteria
-
-* ✅ Proper implementation of backup and rotation
-* ✅ Upload to Google Drive via CLI
-* ✅ Auto-deletion of expired backups
-* ✅ Webhook notification on success
-
----
-
-Let me know if you want this in `.md` file format or GitHub-optimized version with badges and more sections like "License", "Contributors", etc.
