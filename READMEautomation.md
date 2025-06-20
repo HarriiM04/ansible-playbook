@@ -1,5 +1,3 @@
-Here’s a **cleaned-up, properly formatted, and professional `README.md`** version of what you wrote — structured clearly for others to understand and follow:
-
 ---
 
 # 🛡️ Automated Backup Script with Google Drive & Webhook Integration
